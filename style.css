@@ -20,9 +20,10 @@ h2 {
 
 /* Navbar */
 .navbar {
-    background-color: #483d8b; /* Dark Slate Blue */
-    color: #fff;
-    padding: 15px 0;
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    position: relative;
+    padding: 10px 20px;
 }
 
 .navbar .container {
@@ -36,9 +37,12 @@ h2 {
     color: #ffa07a; /* Light Salmon */
 }
 
+/* Navigation links */
 .nav-links {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -46,23 +50,26 @@ h2 {
 }
 
 .nav-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+/* Hover effect for links */
 .nav-links a:hover {
-    color: #ffa07a; /* Light Salmon */
+    background-color: #575757; /* Darker shade on hover */
 }
 
 /* Mobile Menu */
 .menu-icon {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #ffa07a; /* Light Salmon */
+    display: none; /* Hidden by default */
+    font-size: 28px; /* Adjust size */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* White color */
+    cursor: pointer; /* Pointer cursor */
 }
 
 /* Section Styles */
@@ -80,7 +87,8 @@ form {
     flex-direction: column;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: 2px solid #ffa07a; /* Light Salmon border */
@@ -111,17 +119,42 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        text-align: center;
+        display: none; /* Hide links initially */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        position: fixed; /* Fixed positioning */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        background-color: rgba(51, 51, 51, 0.9); /* Dark background with transparency */
+        padding: 20px; /* Padding for links */
+        z-index: 1000; /* Make sure it’s above other elements */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        overflow-y: auto; /* Allow scrolling if content overflows */
     }
 
+    /* Show menu icon on mobile */
     .menu-icon {
-        display: block;
+        display: block; /* Show hamburger menu */
+    }
+
+    /* Show links when nav is active */
+    .nav-links.active {
+        display: flex; /* Show links */
+    }
+
+    /* Adjust link styles in mobile view */
+    .nav-links li {
+        margin: 10px 0; /* Margin for vertical spacing */
+    }
+
+    .nav-links a {
+        font-size: 24px; /* Larger font size for easier touch */
+        padding: 15px; /* More padding for larger touch targets */
     }
 
     section {
-        padding: 15px;
+        padding: 15px; /* Adjust padding for sections */
     }
 }
 

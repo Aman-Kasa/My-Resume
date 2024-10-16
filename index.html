@@ -4,105 +4,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Aman Kasa- Resume</title>
+    <title>Aman Kasa - Resume</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #ff6347; /* Tomato color */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333; /* Dark background */
+            color: white; /* White text */
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            color: #ffa07a; /* Light Salmon */
+        }
+
+        /* Navigation links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect for links */
+        .nav-links a:hover {
+            background-color: #575757; /* Darker shade on hover */
+        }
+
+        /* Mobile Menu */
+        .menu-icon {
+            display: none; /* Hidden by default */
+            font-size: 28px; /* Adjust size */
+            background: none; /* No background */
+            border: none; /* No border */
+            color: white; /* White color */
+            cursor: pointer; /* Pointer cursor */
+        }
+
+        /* Section Styles */
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ff6347; /* Tomato color border */
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid #ffa07a; /* Light Salmon border */
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #483d8b; /* Dark Slate Blue */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff6347; /* Tomato color */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #483d8b; /* Dark Slate Blue */
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth transition */
+        }
+
+        footer a:hover {
+            color: #ff6347; /* Tomato color on hover */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide links initially */
+                flex-direction: column; /* Stack links vertically */
+                width: 100%; /* Full width */
+                height: 100vh; /* Full height */
+                position: fixed; /* Fixed positioning */
+                top: 0; /* Align to the top */
+                left: 0; /* Align to the left */
+                background-color: rgba(51, 51, 51, 0.9); /* Dark background with transparency */
+                padding: 20px; /* Padding for links */
+                z-index: 1000; /* Make sure it’s above other elements */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+                overflow-y: auto; /* Allow scrolling if content overflows */
+            }
+
+            /* Show menu icon on mobile */
+            .menu-icon {
+                display: block; /* Show hamburger menu */
+            }
+
+            /* Show links when nav is active */
+            .nav-links.active {
+                display: flex; /* Show links */
+            }
+
+            /* Adjust link styles in mobile view */
+            .nav-links li {
+                margin: 10px 0; /* Margin for vertical spacing */
+            }
+
+            .nav-links a {
+                font-size: 24px; /* Larger font size for easier touch */
+                padding: 15px; /* More padding for larger touch targets */
+            }
+
+            section {
+                padding: 15px; /* Adjust padding for sections */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar h1 {
+                font-size: 20px;
+            }
+
+            .nav-links a {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">Aman Abraha</h1>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="menu-icon" onclick="toggleNav()">☰</button>
-        </div>
-        </div>
-
-    </nav>
-
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm Aman Kasa, a software engineering student at alu specializing in machine learning and AI. I have a passion for creating an AI-driven solutions and optimizing backend systems.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <ul>
-            <li>Chemistry: Physial Chemistry, Spectroscopy</li>
-            <li>Python, linux, Terminal</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Networking: CCNA, CompTIA A+, CompTIA network+</li>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <h1 class="logo">Aman Kasa</h1>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+        <button class="menu-icon" onclick="toggleNav()">☰</button>
+    </div>
+</nav>
 
-    <!-- Experience Section -->
-    <section id="experience" class="container">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>CCNA Network | Nas-AIR | 2021 - 01/2024</h3>
-            <ul>
-                <li>Worked as an IT in Nas-air airline headquarter</li>
-                <li>Designed and deployed a wireless network for Zoba-Maekel administration office using Cisco WLC and access points.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Lab Technician | MOE Eritrea | 2020 - 2021</h3>
-            <ul>
-               <li> I have graduated more than 600 stuednts.</li>
-            </ul>
-        </div>
-    </section>
+<!-- About Section -->
+<section id="about" class="container">
+    <h2>About Me</h2>
+    <p>Hello! I'm Aman Kasa, a software engineering student at ALU specializing in machine learning and AI. I have a passion for creating AI-driven solutions and optimizing backend systems.</p>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Data collector website</h3>
-            <p>Built a website that tracks the number of patients in a day at Halibet hospital.</p>
-        </div>
-        <div class="project">
-            <h3>Fingerprint analyser</h3>
-            <p>I trained 17 individuals in the fingerprint application of chromatography.</p>
-        </div>
-    </section>
+<!-- Skills Section -->
+<section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul>
+        <li>Chemistry: Physical Chemistry, Spectroscopy</li>
+        <li>Python, Linux, Terminal</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Networking: CCNA, CompTIA A+, CompTIA Network+</li>
+    </ul>
+</section>
 
-    <!-- Education Section -->
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <p>Cerificate in CCNA and electronics maintenance - MOE Eritrea</p>
-        <p>Bachelor of Science in chemistry - Eritrea Institute of Technology</p>
-    </section>
+<!-- Experience Section -->
+<section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="job">
+        <h3>CCNA Network | Nas-AIR | 2021 - 01/2024</h3>
+        <ul>
+            <li>Worked as an IT at Nas-air airline headquarters</li>
+            <li>Designed and deployed a wireless network for Zoba-Maekel administration office using Cisco WLC and access points.</li>
+        </ul>
+    </div>
+    <div class="job">
+        <h3>Lab Technician | MOE Eritrea | 2020 - 2021</h3>
+        <ul>
+            <li>Graduated more than 600 students.</li>
+        </ul>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+<!-- Projects Section -->
+<section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Data Collector Website</h3>
+        <p>Built a website that tracks the number of patients in a day at Halibet hospital.</p>
+    </div>
+    <div class="project">
+        <h3>Fingerprint Analyzer</h3>
+        <p>I trained 17 individuals in the fingerprint application of chromatography.</p>
+    </div>
+</section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+<!-- Education Section -->
+<section id="education" class="container">
+    <h2>Education</h2>
+    <p>Certificate in CCNA and Electronics Maintenance - MOE Eritrea</p>
+    <p>Bachelor of Science in Chemistry - Eritrea Institute of Technology</p>
+</section>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Aman Kasa | <a href="https://github.com/Aman-Kasa" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/aman-kasa-447b55316/" target="_blank">LinkedIn</a> | <a href="https://medium.com/@a.kasa" target="_blank">Medium</a></p>
+</footer>
 
-    <footer>
-        <p>&copy; 2024 Aman Kasa | <a href="https://github.com/Aman-Kasa"target=_"blank">GitHub</a> | <a href="https://www.linkedin.com/in/aman-kasa-447b55316/"target="_blank">LinkedIn</a> | <a href="https://medium.com/@a.kasa"target="_blank">Medium</a></p>
-    </footer>
+<script>
+    function toggleNav() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active'); // Toggle the active class to show/hide the menu
+    }
 
-    <script src="script.js"></script>
+    // Optional: Add functionality to close the menu when a link is clicked
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active'); // Hide the menu
+        });
+    });
+
+    // Optional: Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent default form submission
+        alert('Message sent!'); // Alert message on submit
+        contactForm.reset(); // Reset the form
+    });
+</script>
 </body>
 </html>
