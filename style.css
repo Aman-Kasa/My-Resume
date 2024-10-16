@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #ff6347; /* Tomato color */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #483d8b; /* Dark Slate Blue */
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    color: #ffa07a; /* Light Salmon */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffa07a; /* Light Salmon */
+}
+
+/* Mobile Menu */
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ffa07a; /* Light Salmon */
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff6347; /* Tomato color border */
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #ffa07a; /* Light Salmon border */
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #483d8b; /* Dark Slate Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff6347; /* Tomato color */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #483d8b; /* Dark Slate Blue */
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
